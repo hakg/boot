@@ -10,7 +10,6 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
-    jcenter()
 }
 
 // junit5
@@ -37,5 +36,4 @@ dependencies {
 //    implementation('org.springframework.session:spring-session-jdbc')
 
     testImplementation('org.springframework.boot:spring-boot-starter-test')
-//    testImplementation("org.springframework.security:spring-security-test")
 }
