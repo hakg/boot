@@ -10,7 +10,7 @@ var main = {
         });
 
         $('#btn-delete').on('click', function () {
-            _this.delete();
+            _this.delete2();
         });
     },
     save : function () {
@@ -43,7 +43,7 @@ var main = {
 
         $.ajax({
             type: 'PUT',
-            url: '/api/v1/posts/'+id,
+            url: '/api/v1/posts/' + id,
             dataType: 'json',
             contentType:'application/json; charset=utf-8',
             data: JSON.stringify(data)
@@ -54,12 +54,12 @@ var main = {
             alert(JSON.stringify(error));
         });
     },
-    delete : function () {
+    delete2 : function () {
         var id = $('#id').val();
 
         $.ajax({
             type: 'DELETE',
-            url: '/api/v1/posts/'+id,
+            url: '/api/v1/posts/' + id,
             dataType: 'json',
             contentType:'application/json; charset=utf-8'
         }).done(function() {
@@ -69,7 +69,6 @@ var main = {
             alert(JSON.stringify(error));
         });
     }
-
 };
 
 main.init();
