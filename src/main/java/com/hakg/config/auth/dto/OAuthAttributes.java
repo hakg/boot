@@ -1,5 +1,7 @@
 package com.hakg.config.auth.dto;
 
+import com.hakg.domain.user.Role;
+import com.hakg.domain.user.User;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -37,4 +39,14 @@ public class OAuthAttributes {
                 .nameAttributeKey(userNameAttributeName)
                 .build();
     }
+
+    public User toEntity() {
+        return User.builder()
+                .name(name)
+                .email(email)
+                .picture(picture)
+                .role(Role.GUEST)
+                .build();
+    }
+
 }
